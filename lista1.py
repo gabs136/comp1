@@ -31,7 +31,12 @@ def prob_10(n,q):
     return (1/1-q) - (((q**n) -1)/q-1)
 
 def prob_11(h_1,m_1,s_1,h_2,m_2,s_2):
-    return (h_2 - h_1), (m_2-m_1), (s_2-s_1)
+    total_sec=((h_2-h_1)*3600) + ((m_2-m_1)*60) + (s_2-s_1)
+
+    horas = total_sec//3600
+    minutos = (total_sec%3600)//60
+    segundos = (total_sec%3600)%60
+    return horas, minutos, segundos
 
 
 def prob_12(total, n_pessoas):
